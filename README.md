@@ -1,4 +1,3 @@
-```markdown
 # Atmos AI 🌍🍃
 **Deep Learning for High-Resolution Atmospheric Modeling & Virtual Sensing**
 
@@ -11,7 +10,7 @@ Traditional environmental monitoring is limited by the high cost of physical sta
 *   **Scale** air quality monitoring to entire cities at a fraction of the hardware cost.
 
 ## 🧠 Model Architecture
-The repository currently hosts the primary **AtmosModel** engine. Key technical features include:
+This repository contains the primary **AtmosModel** engine. Key technical features include:
 *   **Graph-Based Spatiotemporal Modeling:** Uses GNNs to capture the non-linear relationships between neighboring sensor nodes.
 *   **Feature Fusion:** Designed to integrate diverse data streams including humidity, temperature, and particulate matter ($PM_{2.5}$ / $PM_{10}$).
 *   **Virtual Sensor Inference:** A custom-weighted logic that allows the model to act as a software-defined sensor for any given coordinate within the trained graph.
@@ -26,12 +25,12 @@ The repository currently hosts the primary **AtmosModel** engine. Key technical 
 ```text
 ├── models/
 │   └── atmos_gnn_model.py  <-- The core architecture
-├── LICENSE
 └── README.md
 ```
 
 ## ⚡ Quick Start (Inference)
 *Note: Ensure you have your dataset processed into a graph-compatible format (TUDataset or custom PyG Data objects).*
+
 ```python
 import torch
 from models.atmos_gnn_model import AtmosGNN
@@ -51,10 +50,3 @@ with torch.no_grad():
 - [ ] Integration of Satellite Imagery for multi-modal verification.
 - [ ] Real-time API deployment for live environmental monitoring.
 - [ ] Expansion into predictive forecasting (predicting AQI 24 hours in advance).
-
-## 🤝 Contributing
-This is an ongoing project focused on deep-tech for social good. If you have experience in GNNs, atmospheric science, or spatial data, feel free to open an issue or submit a pull request.
-
-## 📄 License
-This project is licensed under the MIT License.
-```
